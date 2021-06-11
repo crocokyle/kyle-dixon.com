@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2><a href="download">Generate a PDF Resume</a></h2>
+    <h2>Work Experience</h2>
+    {% for job in resume.work %}
+        <h3><i>{{ job.position }}</i>, {{ job.company }}</h3>
+        <p><strong>{{ job.startDate }} - {{ job.endDate }}</strong>, {{ job.location }}</p>
+        <ul>
+        {% for highlight in job.highlights %}
+            <li>{{ highlight }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h2>Skills</h2>
+    {% for skill in resume.skills %}
+    <h3>{{ skill.name }}</h3>
+    <ul>
+    {% for keyword in skill.keywords %}
+        <li>{{ keyword }}</li>
+    {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>

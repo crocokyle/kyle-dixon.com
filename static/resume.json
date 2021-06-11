@@ -1,0 +1,243 @@
+{
+  "selectedTemplate": 7,
+  "headings": {
+    "skills": "Skills",
+    "awards": "Accomplishments",
+    "education": "Certifications",
+    "work": "Work Experience"
+  },
+  "basics": {
+    "name": "Kyle Dixon",
+    "email": "me@kyle-dixon.com",
+    "phone": "(315) 308-1007",
+    "location": {
+      "address": "Honolulu, Hawaii"
+    },
+    "website": "https://gitlab.com/crocokyle"
+  },
+  "education": [
+    {
+      "institution": "Google",
+      "area": "Data Analytics Professional Certificate",
+      "startDate": "May 2021",
+      "endDate": "Present",
+      "location": "Currently Enrolled"
+    },
+    {
+      "institution": "Google",
+      "area": "IT Automation with Python Professional Certificate",
+      "location": "Credential # 862H7NMHLNWT",
+      "endDate": "May 2021"
+    },
+    {
+      "area": "Machine Learning",
+      "endDate": "Mar 2021",
+      "institution": "Stanford University",
+      "location": "Credential # UPLHDECTPMYH"
+    },
+    {
+      "institution": "IBM",
+      "location": "Credential # FDCDRFYCAWJS",
+      "endDate": "May 2021",
+      "area": "Containers & Kubernetes Essentials"
+    },
+    {
+      "institution": "FAA",
+      "area": "Part 107 Remote Pilot",
+      "endDate": "Mar 2019",
+      "location": "Credential # 4235090"
+    },
+    {
+      "institution": "Microsoft",
+      "location": "Credential # H024-6710",
+      "area": "Microsoft Certified Professional",
+      "endDate": "Jan 2019"
+    }
+  ],
+  "work": [
+    {
+      "position": "Volunteer Full-stack Developer",
+      "website": "",
+      "endDate": "Present",
+      "highlights": [
+        "Worked with PM on implementation of DEVOPS & Agile workflows",
+        "Implementation of new CI/CD pipelines with microservices",
+        "Migrated existing bare-metal architecture to Docker using CI/CD pipelines",
+        "Code reviews and merge requests",
+        "Creating new game features that included everything from jQuery frontends to custom Python anomaly detection algorithms that analyze player data in MongoDB",
+        "Currently working on migrating microservices to Google Kubernetes Engine "
+      ],
+      "company": "Salvation RP",
+      "startDate": "Nov 2020",
+      "location": "Remote"
+    },
+    {
+      "highlights": [
+        "Created a Google Cloud hosted, fully autonomous, UAV land surveying platform that is able to compete with the accuracy of traditional ground surveying equipment. Platform was created with a containerized Python backend and JS Web UI.",
+        "Worked with GIS software and dimensionality reduction algorithms to automate drafting/CAD tasks.",
+        "Responsible for the administration of the domain, network, and servers at the company's Honolulu and Pearl City offices",
+        "Created a platform that allowed engineers to input images and roof inspection data and then used reinforcement learning to continuously predict the validity of insurance claims"
+      ],
+      "company": "Hawaii Engineering Group",
+      "position": "Software Engineer",
+      "location": "Honolulu, HI",
+      "startDate": "Apr 2019",
+      "endDate": "May 2021"
+    },
+    {
+      "highlights": [
+        "Worked with IaaS in AWS, Azure, GCP, Digital Ocean, and IBM Cloud to implement thin-client architectures",
+        "Microsoft AD domain configuration, network engineering, server management, hardware diagnostics, backup configuration, and security implementations.",
+        "Specialized in high-availability server environments using Hyper-V replication between sites, Microsoft Azure, and clustering of VMs.",
+        "Responsible for engineering and troubleshooting the infrastructure of 12 medium-sized client businesses."
+      ],
+      "company": "Hawaii Tech Support",
+      "position": "Systems Analyst",
+      "location": "Honolulu, HI",
+      "startDate": "Jun 2018",
+      "endDate": "Apr 2019"
+    },
+    {
+      "highlights": [
+        "Worked as a sole-proprietor for several small-sized businesses to create and implement IT solutions.",
+        "Performed CMS/Web development, security audits, vehicle automation, networking, custom workstation and server builds."
+      ],
+      "company": "AK Hawaii Enterprise",
+      "position": "Owner/IT Consultant",
+      "location": "Kapolei, HI",
+      "startDate": "Dec 2009",
+      "endDate": "Jun 2018"
+    },
+    {
+      "highlights": [
+        "Worked in an ISO Class 5 clean room to perform data recovery on standard HDDs.",
+        "Worked with the PC-3000 and DeepSpar Disk Imager to recovery data from failing HDDs and SSDs with corrupted firmware.",
+        "Authored a simple, UNIX-based application to perform low-level disk imaging for logically corrupted drives that do not have overly critical hardware failures."
+      ],
+      "company": "Digital Solutions",
+      "position": "Data Forensics Specialist",
+      "location": "Honolulu, HI",
+      "startDate": "May 2016",
+      "endDate": "Jul 2017"
+    },
+    {
+      "highlights": [
+        "Worked with small-businesses and individual customers to provide networking services, custom PC and server hardware, and casual web design."
+      ],
+      "company": "H Power Computing",
+      "position": "IT Consultant",
+      "location": "Honolulu, HI",
+      "startDate": "Apr 2015",
+      "endDate": "May 2016"
+    },
+    {
+      "highlights": [
+        "Repaired and manufactured mobile LCD screens.",
+        "Developed software that allowed technicians to recover deleted data from Android devices with NAND storage.",
+        "Component level PCB repair on personal electronics. Created BGA temperature profiles for re-flowing surface mount GPU and CPU through iteration."
+      ],
+      "company": "Mobile Remedies",
+      "position": "Repair Technician",
+      "location": "Mililani, HI",
+      "startDate": "Nov 2014",
+      "endDate": "Jun 2015"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Python",
+        "VB.NET",
+        "Lua",
+        "HTML/CSS",
+        "JavaScript",
+        "SQL",
+        "Octave",
+        "PowerShell"
+      ],
+      "name": "Languages (Proficient)"
+    },
+    {
+      "keywords": [
+        "Java",
+        "C#",
+        "Kotlin",
+        "AS400",
+        "Misc Domain Specific Languages"
+      ],
+      "name": "Languages (Basic)"
+    },
+    {
+      "keywords": [
+        "AWS (IaaS)",
+        "Google Cloud Platform (IaaS & PaaS)",
+        "Microsoft Azure (IaaS)",
+        "Digital Ocean (IaaS)",
+        "Vultr (IaaS)",
+        "IBM Cloud (IaaS & PaaS)"
+      ],
+      "name": "Cloud Experience"
+    },
+    {
+      "keywords": [
+        "CI/CD",
+        "Docker",
+        "Kubernetes",
+        "Relational Databases",
+        "Git",
+        "GIS",
+        "Linux/Unix",
+        "APIs",
+        "HyperV",
+        "jQuery",
+        "Vue"
+      ],
+      "name": "Technologies"
+    },
+    {
+      "keywords": [
+        "Machine Learning/AI Algorithms",
+        "Penetration Testing",
+        "Server Administration",
+        "Data Forensics",
+        "Web Development",
+        "Electronics Repair",
+        "Background in Aviation"
+      ],
+      "name": "Other Skills"
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "url": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "date": "Aug 2016",
+      "title": "First Place Award - Po‘oihe Cyber Security Exercise",
+      "awarder": "Army National Guard 29th Brigade",
+      "summary": "A challenge-based exercise designed to present an environment that tests participants knowledge of cybersecurity related concepts, tools and techniques."
+    },
+    {
+      "title": "FBI Infraguard Member",
+      "date": "Dec 2017",
+      "awarder": "FBI Infraguard Honolulu",
+      "summary": "A partnership between the FBI and members of the private sector for the protection of U.S. Critical Infrastructure."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "skills",
+    "education",
+    "awards"
+  ]
+}

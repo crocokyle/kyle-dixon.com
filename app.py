@@ -1,11 +1,20 @@
-from flask import Flask
-
+import json
+from backend import load_json, update_pdf
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+@app.route('/home')
+def home():
+    resume = load_json('static/resume.json')
+    return render_template('home.html', resume=resume)
+
+
+@app.route('/download')
+def download():
+    update_pdf()
+    return render_template('download.html')
 
 
 if __name__ == '__main__':
