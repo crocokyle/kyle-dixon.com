@@ -1,30 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-    <h2><a href="download">Generate a PDF Resume</a></h2>
-    <h2>Work Experience</h2>
-    {% for job in resume.work %}
-        <h3><i>{{ job.position }}</i>, {{ job.company }}</h3>
-        <p><strong>{{ job.startDate }} - {{ job.endDate }}</strong>, {{ job.location }}</p>
-        <ul>
-        {% for highlight in job.highlights %}
-            <li>{{ highlight }}</li>
-        {% endfor %}
-        </ul>
+{% extends "layout.html" %}
+{% block content %}
+    <h2 style="color: white;"><center><a style="color: white;" href="download">Generate a PDF Resume</a></center></h2>
+
+    <h2 style="color: white;">Certifications</h2>
+    {% for cert in resume.education %}
+        <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ cert.endDate }} - {{ cert.area }}</h5>
+                <p class="card-text">
+                    Issued By: <strong>{{ cert.institution }}</strong>
+                </p>
+                <p>
+                    {{ cert.location }}
+                </p>
+                {% if cert.transcript_id %}
+                    <ul>
+                        <li><strong>Transcript ID: </strong><code>{{ cert.transcript_id }}</code></li>
+                        <li><strong>Access Code: </strong><code>{{ cert.access_code }}</code></li>
+                    </ul>
+                {% endif %}
+                {% if cert.link %}
+                    <a href="{{ cert.link }}" target="_blank" class="btn btn-primary">Verify Certificate</a>
+                {% else %}
+                    <a href="" class="btn btn-primary disabled" role="button" aria-disabled="true">Verification Unavailable</a>
+                {% endif %}
+            </div>
+        </div>
     {% endfor %}
 
-    <h2>Skills</h2>
+    <h2 style="color: white;">Work Experience</h2>
+    {% for job in resume.work %}
+        <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-body">
+               <h5 class="card-title"><i>{{ job.position }}</i>, {{ job.company }}</h5>
+                <p><strong>{{ job.startDate }} - {{ job.endDate }}</strong>, {{ job.location }}</p>
+                <p class="card-text">
+                    <ul>
+                    {% for highlight in job.highlights %}
+                        <li>{{ highlight }}</li>
+                    {% endfor %}
+                    </ul>
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+
+    <h2 style="color: white;">Skills</h2>
     {% for skill in resume.skills %}
-    <h3>{{ skill.name }}</h3>
-    <ul>
-    {% for keyword in skill.keywords %}
-        <li>{{ keyword }}</li>
+        <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ skill.name }}</h5>
+                <p class="card-text">
+                <ul class="list-group bg-dark border-light list-group-flush">
+                {% for keyword in skill.keywords %}
+                    <li class="list-group-item bg-dark border-light">{{ keyword }}</li>
+                {% endfor %}
+                </ul>
+                </p>
+            </div>
+        </div>
     {% endfor %}
-    </ul>
-    {% endfor %}
-</body>
-</html>
+
+{% endblock content%}

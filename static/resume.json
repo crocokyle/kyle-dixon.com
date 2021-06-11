@@ -27,31 +27,38 @@
       "institution": "Google",
       "area": "IT Automation with Python Professional Certificate",
       "location": "Credential # 862H7NMHLNWT",
-      "endDate": "May 2021"
+      "endDate": "May 2021",
+      "link": "https://www.credly.com/badges/d3c78d6d-c9de-4892-8750-7c20f6cf9289?source=linked_in_profile"
     },
     {
       "area": "Machine Learning",
       "endDate": "Mar 2021",
       "institution": "Stanford University",
-      "location": "Credential # UPLHDECTPMYH"
+      "location": "Credential # UPLHDECTPMYH",
+      "link": "https://coursera.org/verify/UPLHDECTPMYH"
     },
     {
       "institution": "IBM",
       "location": "Credential # FDCDRFYCAWJS",
       "endDate": "May 2021",
-      "area": "Containers & Kubernetes Essentials"
-    },
-    {
-      "institution": "FAA",
-      "area": "Part 107 Remote Pilot",
-      "endDate": "Mar 2019",
-      "location": "Credential # 4235090"
+      "area": "Containers & Kubernetes Essentials",
+      "link": "https://www.credly.com/badges/ac7ff140-831d-4a9b-9ff4-a64359fb69bb?source=linked_in_profile"
     },
     {
       "institution": "Microsoft",
       "location": "Credential # H024-6710",
       "area": "Microsoft Certified Professional",
-      "endDate": "Jan 2019"
+      "endDate": "Jan 2019",
+      "link": "https://mcp.microsoft.com/Anonymous/Transcript/Validate",
+      "transcript_id": "1307229",
+      "access_code": "31415926"
+    },
+    {
+      "institution": "FAA",
+      "area": "Part 107 Remote Pilot",
+      "endDate": "Mar 2019",
+     "location": "Certificate # 4235090",
+      "link": "https://amsrvs.registry.faa.gov/airmeninquiry/Main.aspx"
     }
   ],
   "work": [
