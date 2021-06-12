@@ -12,6 +12,39 @@
     {% endif %}
 </head>
 <body style="background-color:#254A65;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/home">Kyle Dixon</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">Web Resume <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/download">PDF Resume</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Resume Sections
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#certs">Certifications</a>
+              <a class="dropdown-item" href="#work">Work Experience</a>
+              <a class="dropdown-item" href="#skills">Skills</a>
+            </div>
+          </li>
+        </ul>
+        <a href="tel:3153081007" class="btn btn-primary my-2 my-sm-0" type="submit">(315) 308-1007</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:me@kyle-dixon.com" class="btn btn-primary my-2 my-sm-0" type="submit">me@kyle-dixon.com</a>
+      </div>
+    </nav>
+
+    <p>&nbsp;</p>
+
     <div class="container">
         {% block content %}{% endblock %}
     </div>
