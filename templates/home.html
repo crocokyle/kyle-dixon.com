@@ -2,68 +2,115 @@
 {% block content %}
 
     <div id="certs">
-        <h2 style="color: white;">Certifications</h2>
-        {% for cert in resume.education %}
-            <div class="card text-white bg-dark border-light mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ cert.endDate }} | {{ cert.area }}</h5>
-                    <p class="card-text">
-                        Issued By: <strong>{{ cert.institution }}</strong>
-                    </p>
-                    <p>
-                        {{ cert.location }}
-                    </p>
-                    {% if cert.transcript_id %}
-                        <ul>
-                            <li><strong>Transcript ID: </strong><code>{{ cert.transcript_id }}</code></li>
-                            <li><strong>Access Code: </strong><code>{{ cert.access_code }}</code></li>
-                        </ul>
-                    {% endif %}
-                    {% if cert.link %}
-                        <a href="{{ cert.link }}" target="_blank" class="btn btn-outline-primary">Verify Certificate</a>
-                    {% else %}
-                        <a href="" class="btn btn-outline-primary disabled" role="button" aria-disabled="true">Verification Unavailable</a>
-                    {% endif %}
-                </div>
+        <div class="accordion" id="cert-accordion">
+          <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-header" id="cert-header">
+              <h2 class="mb-0">
+                <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#cert-cards" aria-expanded="true" aria-controls="collapseOne">
+                  <h2>Certifications <i class="fas fa-caret-square-down"></i></h2>
+                </button>
+              </h2>
             </div>
-        {% endfor %}
+
+        <div id="cert-cards" class="collapse show" aria-labelledby="cert-header" data-parent="#cert-accordion">
+            <div class="card-body">
+                {% for cert in resume.education %}
+                    <div class="card text-white bg-dark border-light mb-3">
+                        <div class="card-body">
+                            <div style="float: left"
+                                <h5 class="card-title">{{ cert.endDate }} | {{ cert.area }}</h5>
+                                <p class="card-text">
+                                    Issued By: <strong>{{ cert.institution }}</strong>
+                                </p>
+                                <p>
+                                    {{ cert.location }}
+                                </p>
+                                {% if cert.transcript_id %}
+                                    <ul>
+                                        <li><strong>Transcript ID: </strong><code>{{ cert.transcript_id }}</code></li>
+                                        <li><strong>Access Code: </strong><code>{{ cert.access_code }}</code></li>
+                                    </ul>
+                                {% endif %}
+                                {% if cert.link %}
+                                    <a href="{{ cert.link }}" target="_blank" class="btn btn-outline-primary">Verify Certificate</a>
+                                {% else %}
+                                    <a href="" class="btn btn-outline-primary disabled" role="button" aria-disabled="true">Verification Unavailable</a>
+                                {% endif %}
+                            </div>
+                            <div style="float: right">
+                                <img src="static/img/{{ cert.institution }}.png" alt="Card image cap">
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
     <div id="work">
-        <h2 style="color: white;">Work Experience</h2>
-        {% for job in resume.work %}
-            <div class="card text-white bg-dark border-light mb-3">
-                <div class="card-body">
-                   <h5 class="card-title"><i>{{ job.position }}</i>, {{ job.company }}</h5>
-                    <p><strong>{{ job.startDate }} - {{ job.endDate }}</strong>, {{ job.location }}</p>
-                    <p class="card-text">
-                        <ul>
-                        {% for highlight in job.highlights %}
-                            <li>{{ highlight }}</li>
-                        {% endfor %}
-                        </ul>
-                    </p>
-                </div>
+        <div class="accordion" id="work-accordion">
+          <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-header" id="work-header">
+              <h2 class="mb-0">
+                <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#work-cards" aria-expanded="true" aria-controls="collapseOne">
+                  <h2>Work Experience <i class="fas fa-caret-square-down"></i></h2>
+                </button>
+              </h2>
             </div>
-        {% endfor %}
+
+        <div id="work-cards" class="collapse hide" aria-labelledby="work-header" data-parent="#work-accordion">
+            <div class="card-body">
+                {% for job in resume.work %}
+                    <div class="card text-white bg-dark border-light mb-3">
+                        <div class="card-body">
+                           <h5 class="card-title"><i>{{ job.position }}</i>, {{ job.company }}</h5>
+                            <p><strong>{{ job.startDate }} - {{ job.endDate }}</strong>, {{ job.location }}</p>
+                            <p class="card-text">
+                                <ul>
+                                {% for highlight in job.highlights %}
+                                    <li>{{ highlight }}</li>
+                                {% endfor %}
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
+
+
     <div id="skills">
-        <h2 style="color: white;">Skills</h2>
-        {% for skill in resume.skills %}
-            <div class="card text-white bg-dark border-light mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ skill.name }}</h5>
-                    <p class="card-text">
-                    <ul class="list-group bg-dark border-light list-group-flush">
-                    {% for keyword in skill.keywords %}
-                        <li class="list-group-item bg-dark border-light">{{ keyword }}</li>
-                    {% endfor %}
-                    </ul>
-                    </p>
-                </div>
+
+        <div class="accordion" id="skills-accordion">
+          <div class="card text-white bg-dark border-light mb-3">
+            <div class="card-header" id="skills-header">
+              <h2 class="mb-0">
+                <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#skills-cards" aria-expanded="true" aria-controls="collapseOne">
+                  <h2>Skills <i class="fas fa-caret-square-down"></i></h2>
+                </button>
+              </h2>
             </div>
-        {% endfor %}
+
+        <div id="skills-cards" class="collapse hide" aria-labelledby="skills-header" data-parent="#skills-accordion">
+            <div class="card-body">
+                {% for skill in resume.skills %}
+                    <div class="card text-white bg-dark border-light mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ skill.name }}</h5>
+                            <p class="card-text">
+                            <ul class="list-group bg-dark border-light list-group-flush">
+                            {% for keyword in skill.keywords %}
+                                <li class="list-group-item bg-dark border-light">{{ keyword }}</li>
+                            {% endfor %}
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
 {% endblock content%}

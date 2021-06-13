@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href="{{ url_for('static', filename='font-awesome/css/all.css')}}">
 
     {% if title %}
         <title>{{ title }}</title>
@@ -37,17 +38,49 @@
             </div>
           </li>
         </ul>
-        <a href="tel:3153081007" class="btn btn-primary my-2 my-sm-0" type="submit">(315) 308-1007</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="mailto:me@kyle-dixon.com" class="btn btn-primary my-2 my-sm-0" type="submit">me@kyle-dixon.com</a>
+
       </div>
     </nav>
 
     <p>&nbsp;</p>
 
     <div class="container">
-        {% block content %}{% endblock %}
+        <div class="row py-3">
+            <div class="col-3 order-2" id="sticky-sidebar">
+                <div class="sticky-top">
+                  <div class="content-section">
+                    <h3 style="color: white;">Contact</h3>
+                    <p class='text-muted'>
+                      <ul class="list-group">
+                        <a href="tel:3153081007" target="_blank" class="list-group-item list-group-item-action list-group-item-primary"><i class="fas fa-phone-square"></i> (315) 308-1007</a>
+                        <a href="mailto:me@kyle-dixon.com" target="_blank" class="list-group-item list-group-item-action list-group-item-primary"><i class="fas fa-envelope-square"></i> me@kyle-dixon.com</a>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="content-section">
+                    <h3 style="color: white;">Social</h3>
+                    <p class='text-muted'>
+                      <ul class="list-group">
+`                          <li class="list-group-item list-group-item-dark" style="font-size: 150%;">
+                            <center>
+                            <a href="https://www.linkedin.com/in/kyle-a-dixon/" target="_blank"><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://github.com/crocokyle" target="_blank"><i class='fab fa-github'></i></a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://gitlab.com/crocokyle" target="_blank"><i class="fab fa-gitlab"></i></a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://stackoverflow.com/users/story/13859761" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                            </center>
+                          </li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col" id="main">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

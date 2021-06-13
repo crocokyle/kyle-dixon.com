@@ -38,5 +38,6 @@ def update_pdf():
     pdf = request_pdf(data)
     save_pdf(pdf)
 
+
 if __name__ == '__main__':
     update_pdf()
